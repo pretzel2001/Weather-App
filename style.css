@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(121, 241, 164) 10%, rgb(14, 92, 173) 100%); 
+}
+::selection{
+    color: #f2f2f2;
+    background: rgb(102, 153, 208);
+}
+body::before, body::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+}
+body::before{
+    clip-path: circle(30% at left 20%);
+    opacity: 0.5;
+    background: linear-gradient(135deg,rgb(14, 92, 173) 10%, rgb(121, 241, 164) 100%);
+}
+body::after{
+    opacity: 0.5;
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg,rgb(14, 92, 173) 10%, rgb(121, 241, 164) 100%);
+}
+header{
+    width: 60vw;
+    height: 80vh;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    z-index: 12;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+}
+.container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.search-location{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    position: relative;
+    
+}
+.search-location input{
+    width: 35%;
+    height: 40px;
+    border: 1px solid white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius:5px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: gray;
+}
+.search input:focus{
+    outline: none;
+    border: 1px solid rgb(105, 215, 146);
+}
+.search button{
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px;
+    background-color: rgb(121, 241, 164);
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.weather{
+    text-align: center;
+    align-items: center;
+}
+.weather img{
+    align-items: center;
+    width: 7vw;
+    height: 14vh;
+}
+.weather h2{
+    margin-top: 10px;
+}
+.humidity, .visibility, .wind-speed, .feels-like{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.humidity h4{
+    margin-left: 18px;
+}
+.humidity p, .visibility p, .wind-speed p, .feels-like p{
+    margin-left: 5px;
+}
+.visibility h4{
+    margin-left: 14px;
+}
+.wind-speed h4{
+    margin-left: 16px;
+}
+.feels-like h4{
+    margin-left: 22px
+}
+.check-daily{
+    width: 8vw;
+    height: 5vh;
+}
+.fiveday{
+    display: grid;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-columns: auto auto auto auto;
+    flex-direction: row;
+    justify-content:center;
+}
+.card{
+    font-size: 12px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    z-index: 12;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+}
+.card img{
+    width: 4vw;
+    height: 7vh;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+.footer{
+    text-align: center;
+}
+@media (max-width: 575px){
+    body{
+        margin-top: 70px;
+    }
+    header{
+        width: 80vw;
+        height: 160vh;
+    }
+    body::before, body::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top:0;
+        height: 200%;
+        width: 100%;
+    }
+    .search-location input{
+        width: 75%;
+        height: 40px;
+    }
+    .weather img{
+        width: 25vw;
+        height: 12vh;
+    }
+    .humidity, .visibility, .wind-speed, .feels-like{
+        font-size: 14px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+    .fiveday{
+        display: grid;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: auto auto;
+        flex-direction: row;
+        justify-content:center;
+    }
+    .card{
+        font-size: 12px;
+        background: rgba(255,255,255,0.1);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-left:1px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(50px);
+        margin-top: 15px;
+    }
+}

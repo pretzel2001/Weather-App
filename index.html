@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="connect()">
+    <header>
+        <div class="container">
+            <div class="search">
+                <div class="search-location">
+                    <input type="text" placeholder="search for locations" id="searchbar">
+                    <button onclick="connect()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="weather" id="day1">
+                <img src="" id="currenticon" alt="">
+                <h2 class="temperature" id="temp"></h2>
+                <div class="city-state" id="cityName"></div>
+                <div class="date" id="date"></div>
+                <div class="time" id="time"></div><br>
+                <div class="details">
+                    <div class="details-info">
+                        <div class="humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <h4>Humidity: </h4>
+                            <p class="humid-info"id="humidity"></p>
+                        </div>
+                        <div class="visibility">
+                            <i class="fa-solid fa-eye"></i>
+                            <h4>Visibility: </h4>
+                            <p class="visibility-info"id="visibility"> </p>
+                        </div>
+                        <div class="wind-speed">
+                            <i class="fa-solid fa-wind"></i>
+                            <h4>Wind Speed: </h4>
+                            <p class="wind-speed-info"id="windspeed"></p>
+                        </div>
+                        <div class="feels-like">
+                            <i class="fa-solid fa-temperature-three-quarters"></i>
+                            <h4>Feels like: </h4>
+                            <p class="feels-like-info"id="feelslike"></p>
+                        </div><br>
+                    </div>
+                    <div class="fiveday">
+                        <div class="card" id="day2">
+                            <div class="date"id="date2"></div>
+                            <img src="" id ="icon2" alt="">
+                            <div class="temperature"id="temp2"></div>
+                        </div>
+                        <div class="card"id="day3">
+                            <div class="date"id="date3"></div>
+                            <img src="" id ="icon3" alt="">
+                            <div class="temperature"id="temp3"></div>
+                        </div>
+                        <div class="card" id="day4">
+                            <div class="date"id="date4"></div>
+                            <img src="" id ="icon4" alt="">
+                            <div class="temperature"id="temp4"></div>
+                        </div>
+                        <div class="card" id="day5">
+                            <div class="date"id="date5"></div>
+                            <img src="" id ="icon5" alt="">
+                            <div class="temperature"id="temp5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="footer">® All Rights Reserved 2023</div>
+    </header>
+    <script src="index.js"></script>
+</body>
+</html>
